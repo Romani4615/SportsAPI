@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import axios from 'axios';
+import Navbar from './components/Navbar';
+import Home from './views/Home';
+import Teams from './views/Teams';
+import Players from './views/Players';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <Navbar />
+        <Routes>
+        <Route exact path="/" render={ ()=> <Home /> } />
+        <Route exact path="/Teams" render={ ()=> <Teams /> } />
+        <Route exact path="/Players" render={ ()=> <Players /> } />
+
+        </Routes>
+      </div>
+    )
+  }
 }
-
-export default App;
