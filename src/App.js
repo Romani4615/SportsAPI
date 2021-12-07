@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import axios from 'axios';
 import Navbar from './components/Navbar';
 import Home from './views/Home';
 import Teams from './views/Teams';

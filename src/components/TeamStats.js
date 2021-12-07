@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 
-export default class Home extends Component {
+export default class TeamStats extends Component {
     render() {
         return (
             <div>
-                <link rel="stylesheet" to="/teams" >NHL</link>
                 
             </div>
         )
