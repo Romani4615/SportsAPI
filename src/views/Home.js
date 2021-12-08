@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-
+import { Link } from 'react-router-dom'
 export default class Home extends Component {
     render() {
         return (
             <div>
-                <link rel="stylesheet" to="/teams" >NHL</link>
+                <Link rel="stylesheet" to="/teams" >NHL</Link>
                 
             </div>
         )
