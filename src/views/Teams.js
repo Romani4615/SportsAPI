@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import AllTeams from "../components/AllTeams";
 
 export default class Teams extends Component {
   constructor(props) {
@@ -15,7 +16,7 @@ componentDidMount() {
     .then(data => {
         console.log(data)
         this.setState({
-            nhlTeams: data
+            nhlTeams: data.teams
         })
     })
     .catch(err => console.log(err))
@@ -23,25 +24,23 @@ componentDidMount() {
   render() {
     return (
       <div className="container">
-   
+        <table className="table-hover">
+          <thead>
+            <tr>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          
+        </table>
+        <tbody>
+          <tr>
+              <td>
+                {this.state.nhlTeams.map(a => <AllTeams team={a} />)};
+              </td>
+          </tr>
+        </tbody>
       </div>
     );
-  }
-}
-
-
-/* <table class="table">
-<thead>
-  <tr>
-    <th scope="col">#</th>
-    <th scope="col">First</th>
-    <th scope="col">Last</th>
-    <th scope="col">Handle</th>
-  </tr>
-</thead>
-<tbody>
-  {this.props.nhlTeams.map((teams, i) => (
-    <TeamStats teams={teams} key={i} />
-  ))}
-</tbody>
-</table> */
+  };
+};
