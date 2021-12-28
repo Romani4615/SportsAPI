@@ -16,8 +16,8 @@ export default class App extends Component {
         <Route path="/teams">
           <Teams />
         </Route>
+        <Route exact path="/selectedteam:id" render={ ()=> <SelectedTeam /> } />
         <Route exact path="/Players" render={ ()=> <Players /> } />
-        <Route exact path="/selectedteam" render={ ()=> <SelectedTeam /> } />
 
         </Switch>
       </div>

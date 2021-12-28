@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Card } from 'react-bootstrap'
+import { Card, Button } from 'react-bootstrap';
+
 export default class AllTeams extends Component {
   constructor(props) {
     super(props);
@@ -44,6 +45,7 @@ export default class AllTeams extends Component {
       { console.log(stat)
         // Put stats/standings informaiton here
       }
+   <Button className="outline-secondary" href={`/selectedteam/${team.id}`}>{team.abbreviation + " Stats"}</Button>      
     
     </Card.Text> } 
   </Card.Body>
