@@ -4,8 +4,9 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                <Link rel="stylesheet" to="/teams" >NHL</Link>
-                
+                <Link rel="stylesheet" to="/teams" >
+                <img src="src/photos/NHLlogo.png" ></img>
+                </Link>
             </div>
         )
     }
